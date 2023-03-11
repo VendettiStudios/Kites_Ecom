@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <>
       <Carousel images={images} />
-      <Carousel images={images} />
     </>
   );
 };

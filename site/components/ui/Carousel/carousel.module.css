@@ -1,0 +1,35 @@
+.carouselContainer {
+    position: relative;
+    overflow: hidden;
+  }
+  .imageCarousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: calc(100vh - 196px);
+    max-height: calc(100vh - 196px);
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  
+  
+  .active .image {
+    height: 100vh;
+    width: auto;
+  }
+  

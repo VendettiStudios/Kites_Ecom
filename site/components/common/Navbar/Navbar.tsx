@@ -1,54 +1,151 @@
-import { FC } from 'react'
-import Link from 'next/link'
-import s from './Navbar.module.css'
-import NavbarRoot from './NavbarRoot'
-import { Logo, Container } from '@components/ui'
-import { Searchbar, UserNav } from '@components/common'
+import { FC, useState } from 'react';
+import Link from 'next/link';
+import s from './Navbar.module.css';
+import Container from '@components/ui/Container/Container';
+import Image from 'next/image';
+import Hamburger from './Hamburger';
 
 interface Link {
-  href: string
-  label: string
+    href: string
+    label: string
 }
 
 interface NavbarProps {
-  links?: Link[]
+    links?: Link[]
 }
 
-const Navbar: FC<NavbarProps> = ({ links }) => (
-  <NavbarRoot>
-    <Container clean className="mx-auto max-w-8xl px-6">
-      <div className={s.nav}>
-        <div className="flex items-center flex-1">
-          <Link href="/" className={s.logo} aria-label="Logo">
-            <Logo />
-          </Link>
-          <nav className={s.navMenu}>
-            <Link href="/search" className={s.link}>
-              All
-            </Link>
-            {links?.map((l) => (
-              <Link href={l.href} key={l.href} className={s.link}>
-                {l.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-        {process.env.COMMERCE_SEARCH_ENABLED && (
-          <div className="justify-center flex-1 hidden lg:flex">
-            <Searchbar />
-          </div>
-        )}
-        <div className="flex items-center justify-end flex-1 space-x-8">
-          <UserNav />
-        </div>
-      </div>
-      {process.env.COMMERCE_SEARCH_ENABLED && (
-        <div className="flex pb-4 lg:px-6 lg:hidden">
-          <Searchbar id="mobile-search" />
-        </div>
-      )}
-    </Container>
-  </NavbarRoot>
-)
+const Navbar: FC<NavbarProps> = ({ links }) => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isShopOpen, setIsShopOpen] = useState(false);
+    const [isAccessoriesOpen, setIsAccessoriesOpen] = useState(false);
+    const [isApparelOpen, setIsApparelOpen] = useState(false);
+    const [isJewelryOpen, setIsJewelryOpen] = useState(false);
 
-export default Navbar
+    const handleHamburgerClick = () => {
+        setIsMenuOpen(!isMenuOpen);
+    }
+    const handleShopClick = () => {
+        setIsShopOpen((prevIsShopOpen) => {
+            setIsAccessoriesOpen(false);
+            setIsApparelOpen(false);
+            setIsJewelryOpen(false);
+            return !prevIsShopOpen;
+        });
+    };
+
+    const handleAccessoriesClick = (e: React.MouseEvent<HTMLLIElement>) => {
+        if (e.currentTarget.className.includes(s["menu-item-accessories"])) {
+            e.stopPropagation();
+            setIsAccessoriesOpen(!isAccessoriesOpen);
+        }
+    };
+
+    const handleApparelClick = (e: React.MouseEvent<HTMLLIElement>) => {
+        e.stopPropagation();
+        setIsApparelOpen(!isApparelOpen);
+    };
+
+    const handleJewelryClick = (e: React.MouseEvent<HTMLLIElement>) => {
+        e.stopPropagation();
+        setIsJewelryOpen(!isJewelryOpen);
+    };
+    return (
+        <Container clean className={s.mainContainer}>
+            <div className={s.nav}>
+                <div className={s.hamburger}>
+                    <Hamburger onHamburgerClick={handleHamburgerClick} />
+                    <div
+                        className={s.menu}
+                        style={{ transform: isMenuOpen ? "translateX(0)" : "translateX(-100%)" }}
+                    >
+                        <ul>
+                            <li>New Arrivals</li>
+                            <li
+                                onClick={handleShopClick}
+                                className={`${s["menu-item-shop"]} ${isShopOpen ? s["active"] : ""
+                                    }`}
+                            >
+                                Shop
+                                {isShopOpen && (
+                                    <div className={s["sub-menu-container"]}>
+                                        <div className={s["sub-menu"]}>
+                                            <ul>
+                                                <li
+                                                    onClick={handleApparelClick}
+                                                    className={`${s["menu-item-apparel"]} ${isApparelOpen ? s["active"] : ""
+                                                        }`}
+                                                >
+                                                    Apparel
+                                                    {isApparelOpen && (
+                                                        <div className={s["sub-menu"]}>
+                                                            <ul>
+                                                                <li>Tops</li>
+                                                                <li>Bottoms</li>
+                                                                <li>Dresses</li>
+                                                                <li>Jumpsuits</li>
+                                                            </ul>
+                                                        </div>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    onClick={handleAccessoriesClick}
+                                                    className={`${s["menu-item-accessories"]} ${isAccessoriesOpen ? s["active"] : ""
+                                                        }`}
+                                                >
+                                                    Accessories
+                                                    {isAccessoriesOpen && (
+                                                        <div className={s["sub-menu"]}>
+                                                            <ul>
+                                                                <li>Scarves</li>
+                                                                <li>Bags</li>
+                                                                <li>Hats</li>
+                                                                <li>Shoes</li>
+                                                                <li>Belts</li>
+                                                                <li>Brooches</li>
+                                                                <li>Hair Pieces</li>
+                                                            </ul>
+                                                        </div>
+                                                    )}
+                                                </li>
+                                                <li
+                                                    onClick={handleJewelryClick}
+                                                    className={`${s["menu-item-jewelry"]} ${isJewelryOpen ? s["active"] : ""
+                                                        }`}
+                                                >
+                                                    Jewelry
+                                                    {isJewelryOpen && (
+                                                        <div className={s["sub-menu"]}>
+                                                            <ul>
+                                                                <li>Earrings</li>
+                                                                <li>Necklaces</li>
+                                                                <li>Bracelets</li>
+                                                                <li>Rings</li>
+                                                            </ul>
+                                                        </div>
+                                                    )}
+                                                </li>
+                                                <li>Decor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                )}
+                            </li>
+                            <li>Archive</li>
+                            <li>Meet The Designer</li>
+                            <li>Schedule A Styling</li>
+                        </ul>
+                    </div>
+                    {isMenuOpen && (
+                        <div className={s["menu-overlay"]} onClick={handleHamburgerClick} />
+                    )}
+                </div>
+                <Image className={s.logo} src="/navLogo.png" alt="nav Logo" width={250} height={150} />
+                <div className={s.bag}>
+                    <Image src="/bag.png" alt="Cart icon" width={24} height={24} />
+                </div>
+            </div>
+        </Container>
+    );
+};
+
+export default Navbar;

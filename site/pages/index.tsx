@@ -3,7 +3,7 @@ import Carousel from '@components/ui/Carousel/Carousel';
 import Image from 'next/image';
 
 const Home = () => {
-  const images = ['/image1.jpeg', '/image2.jpeg', '/image3.jpeg'];
+  const images = ['/footerLogo.png', '/image2.jpeg', '/image3.jpeg'];
 
   return (
     <>

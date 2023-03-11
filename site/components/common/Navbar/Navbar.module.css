@@ -1,51 +1,53 @@
 .mainContainer {
-    position: sticky;
+    padding: 20px 15px;
+    position: fixed;
     top: 0;
-    background-color:white;
-    z-index:40;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-    transition-duration: 150ms;
-    height:60px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1920px;
-    padding-left: 1.5rem/* 24px */;
-    padding-right: 1.5rem;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
     border-bottom: 1px solid lightgray;
-}
-
-.nav {
-    position:relative;
-    display:flex;
-    align-items:center;
-    /* height:60px; */
-    flex-direction:row;
-    justify-content:space-between;
+    height:60px;
+  }
+  
+  .nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-@media (min-width: 768px) {
-    .nav {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+    padding-right: 24px;
+  }
+  
+  @media (min-width: 768px) {
+    .mainContainer {
+      height: 100px;
     }
-}
-
-
-.logo{
+    .nav {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+  
+  .logo {
     cursor: pointer;
-    /* border-radius: 9999px; */
     height: 80%;
     width: 40%;
-    border-width: 1px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     transition-duration: 100ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu {
+  }
+  
+  @media (min-width: 768px) {
+    .logo {
+      height: 80%;
+      width: 20%;
+    }
+  }
+  
+  .menu {
     position: fixed;
     top: 61px;
     left: 0;
@@ -62,7 +64,6 @@
     font-size: 16px;
     font-weight: bold;
   }
-  
   
   .menu ul {
     list-style: none;

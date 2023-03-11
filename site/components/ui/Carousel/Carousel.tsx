@@ -22,9 +22,9 @@ const Carousel = ({ images }: CarouselProps) => {
             <Image
               src={images[activeIndex]}
               alt={`Image ${activeIndex}`}
-              width={400}
-              height={400}
-              style={{ objectFit: 'contain' }}
+              width={3047}
+              height={4571}
+              layout="responsive"
               className={s.image}
             />
           </div>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import s from './Navbar.module.css';
 import Container from '@components/ui/Container/Container';
 import Image from 'next/image';
-// import Hamburger from './Hamburger';
+import Hamburger from './Hamburger';
 
 interface Link {
     href: string
@@ -53,7 +53,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
         <Container clean className={s.mainContainer}>
             <div className={s.nav}>
                 <div className={s.hamburger}>
-                    {/* <Hamburger onHamburgerClick={handleHamburgerClick} /> */}
+                    <Hamburger onHamburgerClick={handleHamburgerClick} />
                     <div
                         className={s.menu}
                         style={{ transform: isMenuOpen ? "translateX(0)" : "translateX(-100%)" }}

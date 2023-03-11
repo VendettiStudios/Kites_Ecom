@@ -2,7 +2,7 @@ import Layout from '@components/common/Layout/Layout';
 import Carousel from '@components/ui/Carousel/Carousel';
 
 const Home = () => {
-  const images = ['/image1.jpg', '/image2.jpg', '/image3.jpg'];
+  const images = ['/image1.jpeg', '/image2.jpeg', '/image3.jpeg'];
 
   return (
     <>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import s from './Navbar.module.css';
 import Container from '@components/ui/Container/Container';
 import Image from 'next/image';
-import Hamburger from './Hamburger';
+import Hamburger from '../Hamburger/Hamburger';
 
 interface Link {
     href: string

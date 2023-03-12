@@ -19,6 +19,7 @@
     padding-bottom: 1rem;
     padding-right: 24px;
     height:60px;
+    padding-left:20px;
   }
   
   @media (min-width: 768px) {

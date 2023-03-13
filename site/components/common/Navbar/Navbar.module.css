@@ -49,6 +49,11 @@
     }
   }
   
+  .link{
+    text-decoration:none;
+    color:inherit;
+  }
+
   .menu {
     position: fixed;
     top: 81px;

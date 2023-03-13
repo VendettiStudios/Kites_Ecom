@@ -50,101 +50,139 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
         setIsJewelryOpen(!isJewelryOpen);
     };
     return (
-        <Container clean className={s.mainContainer}>
-            <div className={s.nav}>
-                <div className={s.hamburger}>
-                    <Hamburger onHamburgerClick={handleHamburgerClick} />
-                    <div
-                        className={s.menu}
-                        style={{ transform: isMenuOpen ? "translateX(0)" : "translateX(-100%)" }}
-                    >
-                        <ul>
-                            <li>New Arrivals</li>
-                            <li
-                                onClick={handleShopClick}
-                                className={`${s["menu-item-shop"]} ${isShopOpen ? s["active"] : ""
-                                    }`}
-                            >
-                                Shop
-                                {isShopOpen && (
-                                    <div className={s["sub-menu-container"]}>
-                                        <div className={s["sub-menu"]}>
-                                            <ul>
-                                                <li
-                                                    onClick={handleApparelClick}
-                                                    className={`${s["menu-item-apparel"]} ${isApparelOpen ? s["active"] : ""
-                                                        }`}
-                                                >
-                                                    Apparel
-                                                    {isApparelOpen && (
-                                                        <div className={s["sub-menu"]}>
-                                                            <ul>
-                                                                <li>Tops</li>
-                                                                <li>Bottoms</li>
-                                                                <li>Dresses</li>
-                                                                <li>Jumpsuits</li>
-                                                            </ul>
-                                                        </div>
-                                                    )}
-                                                </li>
-                                                <li
-                                                    onClick={handleAccessoriesClick}
-                                                    className={`${s["menu-item-accessories"]} ${isAccessoriesOpen ? s["active"] : ""
-                                                        }`}
-                                                >
-                                                    Accessories
-                                                    {isAccessoriesOpen && (
-                                                        <div className={s["sub-menu"]}>
-                                                            <ul>
-                                                                <li>Scarves</li>
-                                                                <li>Bags</li>
-                                                                <li>Hats</li>
-                                                                <li>Shoes</li>
-                                                                <li>Belts</li>
-                                                                <li>Brooches</li>
-                                                                <li>Hair Pieces</li>
-                                                            </ul>
-                                                        </div>
-                                                    )}
-                                                </li>
-                                                <li
-                                                    onClick={handleJewelryClick}
-                                                    className={`${s["menu-item-jewelry"]} ${isJewelryOpen ? s["active"] : ""
-                                                        }`}
-                                                >
-                                                    Jewelry
-                                                    {isJewelryOpen && (
-                                                        <div className={s["sub-menu"]}>
-                                                            <ul>
-                                                                <li>Earrings</li>
-                                                                <li>Necklaces</li>
-                                                                <li>Bracelets</li>
-                                                                <li>Rings</li>
-                                                            </ul>
-                                                        </div>
-                                                    )}
-                                                </li>
-                                                <li>Decor</li>
-                                            </ul>
+        <nav>
+            <Container clean className={s.mainContainer}>
+                <div className={s.nav}>
+                    <div className={s.hamburger}>
+                        <Hamburger onHamburgerClick={handleHamburgerClick} />
+                        <div
+                            className={s.menu}
+                            style={{ transform: isMenuOpen ? "translateX(0)" : "translateX(-100%)" }}
+                        >
+                            <ul>
+                                <Link className={s.link} href="/new-arrivals">
+                                    <li >New Arrivals</li>
+                                </Link>
+                                <li
+                                    onClick={handleShopClick}
+                                    className={`${s["menu-item-shop"]} ${isShopOpen ? s["active"] : ""
+                                        }`}
+                                >
+                                    Shop
+                                    {isShopOpen && (
+                                        <div className={s["sub-menu-container"]}>
+                                            <div className={s["sub-menu"]}>
+                                                <ul>
+                                                    <li
+                                                        onClick={handleApparelClick}
+                                                        className={`${s["menu-item-apparel"]} ${isApparelOpen ? s["active"] : ""
+                                                            }`}
+                                                    >
+                                                        Apparel
+                                                        {isApparelOpen && (
+                                                            <div className={s["sub-menu"]}>
+                                                                <ul>
+                                                                    <Link className={s.link} href='/tops'>
+                                                                        <li>Tops</li>
+                                                                    </Link>
+                                                                    <Link className={s.link} href='/bottoms'>
+                                                                        <li>Bottoms</li>
+                                                                    </Link>
+                                                                    <Link className={s.link} href="/dresses">
+                                                                        <li>Dresses</li>
+                                                                    </Link>
+                                                                    <Link className={s.link} href="/jumpsuits">
+                                                                        <li>Jumpsuits</li>
+                                                                    </Link>
+                                                                </ul>
+                                                            </div>
+                                                        )}
+                                                    </li>
+                                                    <li
+                                                        onClick={handleAccessoriesClick}
+                                                        className={`${s["menu-item-accessories"]} ${isAccessoriesOpen ? s["active"] : ""
+                                                            }`}
+                                                    >
+                                                        Accessories
+                                                        {isAccessoriesOpen && (
+                                                            <div className={s["sub-menu"]}>
+                                                                <ul>
+                                                                    <Link className={s.link} href="/scarves">
+                                                                        <li>Scarves</li>
+                                                                    </Link>
+                                                                    <Link className={s.link} href="/bags"></Link>
+                                                                    <li>Bags</li>
+                                                                    <Link className={s.link} href="/hats"></Link>
+                                                                    <li>Hats</li>
+                                                                    <Link className={s.link} href="/shoes"></Link>
+                                                                    <li>Shoes</li>
+                                                                    <Link className={s.link} href="/belts"></Link>
+                                                                    <li>Belts</li>
+                                                                    <Link className={s.link} href="/brooches"></Link>
+                                                                    <li>Brooches</li>
+                                                                    <Link className={s.link} href="/hair-pieces"></Link>
+                                                                    <li>Hair Pieces</li>
+                                                                </ul>
+                                                            </div>
+                                                        )}
+                                                    </li>
+                                                    <li
+                                                        onClick={handleJewelryClick}
+                                                        className={`${s["menu-item-jewelry"]} ${isJewelryOpen ? s["active"] : ""
+                                                            }`}
+                                                    >
+                                                        Jewelry
+                                                        {isJewelryOpen && (
+                                                            <div className={s["sub-menu"]}>
+                                                                <ul>
+                                                                    <Link className={s.link} href="/earrings">
+                                                                        <li>Earrings</li>
+                                                                    </Link>
+                                                                    <Link className={s.link} href="/necklaces">
+                                                                        <li>Necklaces</li>
+                                                                    </Link>
+                                                                    <Link className={s.link} href="/bracelets">
+                                                                        <li>Bracelets</li>
+                                                                    </Link>
+                                                                    <Link className={s.link} href="/rings">
+                                                                        <li>Rings</li>
+                                                                    </Link>
+                                                                </ul>
+                                                            </div>
+                                                        )}
+                                                    </li>
+                                                    <Link className={s.link} href="/decor">
+                                                        <li>Decor</li>
+                                                    </Link>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                )}
-                            </li>
-                            <li>Archive</li>
-                            <li>Meet The Designer</li>
-                            <li>Schedule A Styling</li>
-                        </ul>
+                                    )}
+                                </li>
+                                <Link className={s.link} href="/archive">
+                                    <li>Archive</li>
+                                </Link>
+                                <Link className={s.link} href="/meet-the-designer">
+                                    <li>Meet The Designer</li>
+                                </Link>
+                                <Link className={s.link} href="/schedule-a-styling">
+                                    <li>Schedule A Styling</li>
+                                </Link>
+                            </ul>
+                        </div>
+                        {isMenuOpen && (
+                            <div className={s["menu-overlay"]} onClick={handleHamburgerClick} />
+                        )}
                     </div>
-                    {isMenuOpen && (
-                        <div className={s["menu-overlay"]} onClick={handleHamburgerClick} />
-                    )}
+                    {/* <Link className={s.link} href='/'> */}
+                    <Image className={s.logo} src="/navLogo.png" alt="nav Logo" width={250} height={150} />
+                    {/* </Link> */}
+                    <div className={s.bag}>
+                        <Image src="/bag.png" alt="Cart icon" width={24} height={24} />
+                    </div>
                 </div>
-                <Image className={s.logo} src="/navLogo.png" alt="nav Logo" width={250} height={150} />
-                <div className={s.bag}>
-                    <Image src="/bag.png" alt="Cart icon" width={24} height={24} />
-                </div>
-            </div>
-        </Container>
+            </Container>
+        </nav>
     );
 };
 

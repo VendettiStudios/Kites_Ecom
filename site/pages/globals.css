@@ -1,3 +1,129 @@
 body {
-    margin:0;
+  margin: 0;
+}
+.container {
+  padding-top: 65px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-top: 105px;
+  }
+}
+
+.header {
+  display: flex;
+  padding-left: 40px;
+  /* width: 100%;
+  justify-content: center; */
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  width:100%;
+  align-items: center;
+  text-align: center;
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+  align-items: center;
+  text-align: center;
+}
+
+.carla1 {
+    display: flex;
+    height: 90%;
+    width: 90%;
+  }
+
+  .carla2 {
+    height: 90%;
+    width: 90%;
+  }
+
+  .carla3 {
+    height: 90%;
+    width: 90%;
+    padding-bottom: 20px;
+  }
+
+  .text{
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+@media (min-width: 768px) {
+  .section1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left:30px;
+    align-items: initial;
+    max-width:90vw;
+  }
+
+  .section2 {
+    flex-direction: row;
+    padding-top: 30px;
+    justify-content: flex-start;
+    margin-right: 30px;
+    margin-left:30px;
+    align-items: initial;
+    max-width:90vw;
+  }
+
+  .section3 {
+    padding-top: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left:30px;
+    align-items: initial;
+    max-width:90vw;
+  }
+
+  .carla1 {
+    display: flex;
+    height: 35%;
+    width: 35%;
+    padding-left: 30px;
+  }
+
+  .carla2 {
+    height: 50%;
+    width: 50%;
+    padding-right: 30px;
+  }
+
+  .carla3 {
+    height: 35%;
+    width: 35%;
+    padding-left: 30px;
+  }
+  .text1{
+    text-align: initial;
+    width:80%;
+    padding-left:20px;
+  }
+  .text2{
+    text-align: initial;
+    padding-right: 20px;
+  }
 }

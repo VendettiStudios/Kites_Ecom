@@ -54,6 +54,7 @@ body {
   .carla2 {
     height: 90%;
     width: 90%;
+    padding-bottom:20px;
   }
 
   .carla3 {
@@ -62,9 +63,10 @@ body {
     padding-bottom: 20px;
   }
 
-  .text{
-    padding-bottom:10px;
-    padding-left:10px;
+  .text1,
+  .text2{
+    padding-bottom:20px;
+    padding-left:20px;
     padding-right:10px;
   }
 

@@ -47,18 +47,18 @@ body {
 
 .carla1 {
     display: flex;
-    height: 90%;
+    height: auto;
     width: 90%;
   }
 
   .carla2 {
-    height: 90%;
+    height: auto;
     width: 90%;
     padding-bottom:20px;
   }
 
   .carla3 {
-    height: 90%;
+    height: auto;
     width: 90%;
     padding-bottom: 20px;
   }

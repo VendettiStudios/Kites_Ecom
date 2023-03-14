@@ -24,7 +24,6 @@ const Carousel = ({ images }: CarouselProps) => {
             alt={`Image ${activeIndex}`}
             width={1000}
             height={667}
-            layout="responsive"
             priority
             className={s.image}
           />

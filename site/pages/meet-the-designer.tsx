@@ -23,8 +23,8 @@ const meetTheDesigner = (props: Props) => {
                     className="carla1"
                     src='/Carla1.jpeg'
                     alt={'Carla Image'}
-                    width="560"
-                    height="840"
+                    width="280"
+                    height="420"
                     priority
                     quality={100}
                 />
@@ -58,8 +58,8 @@ const meetTheDesigner = (props: Props) => {
                     className="carla3"
                     src='/Carla2.jpeg'
                     alt={'Carla Image'}
-                    width="560"
-                    height="840"
+                    width="280"
+                    height="420"
                     priority
                     quality={100}
                 />

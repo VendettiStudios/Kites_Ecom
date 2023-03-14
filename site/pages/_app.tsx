@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import { FC, ReactNode, useEffect } from 'react'
+import { Head } from '@components/common'
 import './globals.css'
 
 const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
@@ -13,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   
     return (
       <>
-        {/* <Head /> */}
+        <Head />
         {/* <ManagedUIContext> */}
           <Layout pageProps={pageProps}>
             <Component {...pageProps} />

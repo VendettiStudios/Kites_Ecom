@@ -1,7 +1,7 @@
-import type { VFC } from 'react'
+import type { FunctionComponent } from 'react'
 import { SEO } from '@components/common'
 
-const Head: VFC = () => {
+const Head: FunctionComponent = () => {
   return (
     <SEO>
       <meta

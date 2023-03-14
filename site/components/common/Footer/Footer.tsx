@@ -49,7 +49,12 @@ const Footer: FC<Props> = ({ className }) => {
           </div>
                 </div>
                 <div className={s.imageContainer}>
-                    <Image className={s.logo} src="/footerLogo.png" alt="nav Logo" width={51.29} height={72.86} priority />
+                    <Image className={s.logo} src="/footerLogo.png" 
+                    alt="nav Logo" 
+                    width={51.29} 
+                    height={72.86} 
+                    loading="lazy"
+                    />
                 </div>
                 <div className={s.footerText}>
                     <span>&copy; 2023 Kites by Carla Manuel, Inc. All rights reserved.</span>

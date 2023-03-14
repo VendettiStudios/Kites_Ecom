@@ -179,8 +179,8 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                         className={s.logo}
                         src="/navLogo.png"
                         alt="nav Logo"
-                        width={750}
-                        height={256}
+                        width={1505}
+                        height={513}
                         priority
                     />
 

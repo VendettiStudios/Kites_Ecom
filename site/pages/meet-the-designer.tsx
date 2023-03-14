@@ -23,9 +23,10 @@ const meetTheDesigner = (props: Props) => {
                     className="carla1"
                     src='/Carla1.jpeg'
                     alt={'Carla Image'}
-                    width="1120"
-                    height="1680"
+                    width="560"
+                    height="840"
                     priority
+                    quality={100}
                 />
             </div>
             <div className="section2">
@@ -33,9 +34,10 @@ const meetTheDesigner = (props: Props) => {
                     className="carla2"
                     src='/Carla3.jpeg'
                     alt={'Carla Image'}
-                    width="1000"
-                    height="728"
+                    width="500"
+                    height="364"
                     priority
+                    quality={100}
                 />
                 <div className="text2">
                     <Text variant="sectionHeading">Lorum Ipsum</Text>
@@ -56,9 +58,10 @@ const meetTheDesigner = (props: Props) => {
                     className="carla3"
                     src='/Carla2.jpeg'
                     alt={'Carla Image'}
-                    width="1120"
-                    height="1680"
+                    width="560"
+                    height="840"
                     priority
+                    quality={100}
                 />
             </div>
             {/* <Image

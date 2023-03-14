@@ -2,8 +2,7 @@ import cn from 'clsx';
 import s from './Layout.module.css';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import Footer from '@components/common/Footer/Footer';
-import Navbar from '@components/common/Navbar/Navbar';
+import {Footer, Navbar } from '@components/common';
 
 interface Props {
   pageProps: {

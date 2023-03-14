@@ -1,0 +1,16 @@
+{
+  "title": "Kites by Carla Manuel | Independent Fashion Designer",
+  "titleTemplate": "%s - Kites Storefront",
+  "description": "Kites Ecommerce - https://www.kitesbycarlamanuel.com",
+  "openGraph": {
+    "title": "Kites by Carla Manuel Storefront | Independent Fashion Designer",
+    "description": "Kites by Carla Manuel - https://www.kitesbycarlamanuel.com",
+    "type": "website",
+    "url": "https://kitesbycarlamanuel.com",
+    "site_name": "Kites by Carla Manuel"
+  },
+  "Instagram": {
+    "handle": "@kitesbycarlamanuel",
+    "site": "@kitesbycarlamanuel"
+  }
+}

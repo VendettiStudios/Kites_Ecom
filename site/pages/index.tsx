@@ -1,5 +1,5 @@
-import Layout from '@components/common/Layout/Layout';
-import Carousel from '@components/ui/Carousel/Carousel';
+import {Layout} from '@components/common';
+import {Carousel} from '@components/ui';
 
 const Home = () => {
   const images = ['/Image1.jpeg', '/Image2.jpeg', '/Image3.jpeg', '/Image4.jpeg', '/Image5.jpeg', '/Image6.jpeg'];

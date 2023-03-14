@@ -1,6 +1,5 @@
-import Layout from '@components/common/Layout/Layout';
-import Container from '@components/ui/Container/Container';
-import Text from '@components/ui/Text/Text';
+import {Layout} from '@components/common';
+import {Text, Container} from '@components/ui';
 import Image from 'next/image';
 
 type Props = {}

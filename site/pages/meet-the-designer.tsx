@@ -6,7 +6,7 @@ type Props = {}
 
 const meetTheDesigner = (props: Props) => {
     return (
-        <div className="container">
+        <Container className="container">
             <div className="header">
                 <Text variant="pageHeading">Meet The Designer</Text>
             </div>
@@ -82,7 +82,7 @@ const meetTheDesigner = (props: Props) => {
             width="1000"
             height="667"
             /> */}
-        </div>
+        </Container>
     )
 }
 meetTheDesigner.Layout = Layout;

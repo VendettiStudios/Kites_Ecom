@@ -34,8 +34,8 @@ const meetTheDesigner = (props: Props) => {
                     className="carla2"
                     src='/Carla3.jpeg'
                     alt={'Carla Image'}
-                    width="500"
-                    height="364"
+                    width="400"
+                    height="291"
                     priority
                     quality={100}
                 />

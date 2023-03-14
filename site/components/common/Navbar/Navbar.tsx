@@ -175,7 +175,15 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
                         )}
                     </div>
                     {/* <Link className={s.link} href='/'> */}
-                    <Image className={s.logo} src="/navLogo.png" alt="nav Logo" width={250} height={150} />
+                    <Image
+                        className={s.logo}
+                        src="/navLogo.png"
+                        alt="nav Logo"
+                        width={750}
+                        height={256}
+                        priority
+                    />
+
                     {/* </Link> */}
                     <div className={s.bag}>
                         <Image src="/bag.png" alt="Cart icon" width={24} height={24} />
